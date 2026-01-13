@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { ProductGrid } from '../products/ProductGrid';
 
 export default function HomePageClient() {
-  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 3);
+  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 4);
   const newArrivals = products.filter((p) => p.isNew).slice(0, 4);
 
   return (
@@ -45,7 +45,7 @@ export default function HomePageClient() {
               contemporary silhouettes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/shop" className="btn-accent">
+              <Link href="/products" className="btn-accent">
                 Shop Collection
               </Link>
               <Link

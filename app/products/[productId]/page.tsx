@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 import { useParams, useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProductDetailsPage() {
   const { productId } = useParams<{ productId: string }>();
@@ -81,7 +82,7 @@ export default function ProductDetailsPage() {
 
   return (
     <>
-      {/* Breadcrumb */}
+      {/* =========== BREADCRUMB ============= */}
       <div className="bg-secondary/30 py-4">
         <div className="container-wide">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -107,7 +108,7 @@ export default function ProductDetailsPage() {
       <section className="py-12 lg:py-16">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
-            {/* Images */}
+            {/* ========== IMAGES ============ */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -170,7 +171,7 @@ export default function ProductDetailsPage() {
               )}
             </motion.div>
 
-            {/* Details */}
+            {/* =========== DETAILS =========== */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -196,7 +197,7 @@ export default function ProductDetailsPage() {
                 {product.description}
               </p>
 
-              {/* Color Selection */}
+              {/* =========== COLOR SECTION =========== */}
               <div className="mb-6">
                 <p className="text-sm font-medium mb-3">
                   Color:{' '}
@@ -223,7 +224,7 @@ export default function ProductDetailsPage() {
                 </div>
               </div>
 
-              {/* Size Selection */}
+              {/* ============ SIZE SELECTION ============ */}
               <div className="mb-8">
                 <p className="text-sm font-medium mb-3">Size</p>
                 <div className="flex flex-wrap gap-3">
@@ -244,7 +245,7 @@ export default function ProductDetailsPage() {
                 </div>
               </div>
 
-              {/* Quantity & Add to Cart */}
+              {/* =========== QUALITY & ADD TO CART ============ */}
               <div className="flex gap-4 mb-6">
                 <div className="flex items-center border border-border">
                   <button
@@ -263,15 +264,17 @@ export default function ProductDetailsPage() {
                     <Plus className="w-4 h-4" />
                   </button>
                 </div>
-                <button
-                  onClick={handleAddToCart}
-                  className="flex-1 btn-primary"
-                >
-                  Add to Bag
-                </button>
+                <Link href="/cart">
+                  <button
+                    onClick={handleAddToCart}
+                    className="flex-1 btn-primary"
+                  >
+                    Add to Bag
+                  </button>
+                </Link>
               </div>
 
-              {/* Wishlist */}
+              {/* =========== WISHLIST ============ */}
               <button
                 onClick={() => toggleWishlist(product)}
                 className={cn(
@@ -287,7 +290,7 @@ export default function ProductDetailsPage() {
                 {inWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'}
               </button>
 
-              {/* Additional Info */}
+              {/* ============ ADDITIONAL INFO ============= */}
               <div className="mt-8 pt-8 border-t border-border space-y-4">
                 <details className="group">
                   <summary className="flex items-center justify-between cursor-pointer py-2 font-medium">
@@ -296,9 +299,9 @@ export default function ProductDetailsPage() {
                     <Minus className="w-4 h-4 hidden group-open:block" />
                   </summary>
                   <p className="text-muted-foreground text-sm py-2">
-                    Free standard shipping on orders over ₹2500. Express shipping
-                    available at checkout. Returns accepted within 30 days of
-                    delivery for unworn items.
+                    Free standard shipping on orders over ₹2500. Express
+                    shipping available at checkout. Returns accepted within 30
+                    days of delivery for unworn items.
                   </p>
                 </details>
                 <details className="group">
@@ -318,7 +321,7 @@ export default function ProductDetailsPage() {
         </div>
       </section>
 
-      {/* Related Products */}
+      {/* =========== RELATED PRODUCTS ============== */}
       {relatedProducts.length > 0 && (
         <section className="py-16 lg:py-24 bg-secondary/30">
           <div className="container-wide">

@@ -46,7 +46,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           {product.isNew && <span className="badge-new">New</span>}
           {product.originalPrice && <span className="badge-sale">Sale</span>}
 
-          {/* Quick Add Overlay */}
+          {/* ========== QUICK AND OVERLAY ========== */}
           <div className="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <button className="w-full bg-background text-foreground py-3 text-sm uppercase tracking-widest font-medium hover:bg-accent hover:text-accent-foreground transition-colors">
               Quick View
