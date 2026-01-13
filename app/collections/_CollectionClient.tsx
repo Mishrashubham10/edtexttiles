@@ -9,20 +9,14 @@ const collections = [
     id: 'spring-summer',
     name: 'Spring/Summer 2026',
     description: 'Light fabrics and relaxed silhouettes for the warmer months.',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800',
+    image: 'https://i.pinimg.com/736x/49/5b/5a/495b5a3b6c452e3a6daad5bad2629754.jpg',
   },
   {
     id: 'essentials',
     name: 'The Essentials',
     description: 'Timeless pieces that form the foundation of every wardrobe.',
-    image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800',
-  },
-  {
-    id: 'tailored',
-    name: 'Modern Tailoring',
-    description: 'Refined blazers and trousers with contemporary cuts.',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800',
-  },
+    image: 'https://i.pinimg.com/736x/01/f9/0e/01f90e9e9f6eea801edb7577998a0959.jpg',
+  }
 ];
 
 export function CollectionClient() {
