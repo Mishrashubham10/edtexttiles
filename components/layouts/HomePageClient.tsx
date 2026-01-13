@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { ProductGrid } from '../products/ProductGrid';
 
 export default function HomePageClient() {
-  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 4);
+  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 3);
   const newArrivals = products.filter((p) => p.isNew).slice(0, 4);
 
   return (
@@ -23,7 +23,7 @@ export default function HomePageClient() {
             width={500}
             height={500}
           />
-          {/* <div className="absolute inset-0 bg-linear-to-r from-foreground/60 via-foreground/30 to-transparent" /> */}
+          <div className="absolute inset-0 bg-linear-to-r from-foreground/60 via-foreground/30 to-transparent" />
         </div>
 
         <div className="relative container-wide h-full flex items-center">
@@ -149,11 +149,11 @@ export default function HomePageClient() {
                 Discover Our Story
               </Link>
             </motion.div>
-            <div
-              // initial={{ opacity: 0, x: 20 }}
-              // whileInView={{ opacity: 1, x: 0 }}
-              // viewport={{ once: true }}
-              className="order-1 lg:order-2 w-full aspect-4/5"
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="group relative aspect-3/4 overflow-hidden"
             >
               <Image
                 src="https://i.pinimg.com/736x/3f/d8/17/3fd81709b11599b362fdc6f8c342a275.jpg"
@@ -161,7 +161,7 @@ export default function HomePageClient() {
                 className="w-full aspect-4/5 object-cover"
                 fill
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -199,7 +199,7 @@ export default function HomePageClient() {
               {
                 title: 'Complimentary Shipping',
                 description:
-                  'Free shipping on all orders over $250. Express delivery available.',
+                  'Free shipping on all orders over ₹2500. Express delivery available.',
               },
               {
                 title: 'Quality Guarantee',
