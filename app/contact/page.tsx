@@ -125,11 +125,11 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-medium mb-1">Visit Us</h3>
                   <p className="text-muted-foreground">
-                    shop no 5, bmc retail market
+                    506, Cresent Towers, OPP, VIP PLAZA
                     <br />
-                    Chikuwaadi near Phoenix Hospital
+                    OFF LINK RD, Andheri
                     <br />
-                    Borivali West, Mumbai, 400092
+                    Mumbai - 400092, Maharashtra
                   </p>
                 </div>
               </div>
@@ -137,14 +137,16 @@ export default function ContactPage() {
                 <Phone className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h3 className="font-medium mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">+91 9359043986</p>
+                  <p className="text-muted-foreground">+91 9373685488</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <Mail className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h3 className="font-medium mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">hello@edtextiles.com</p>
+                  <p className="text-muted-foreground">
+                    Edtextilesss@gmail.com
+                  </p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -152,9 +154,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-medium mb-1">Business Hours</h3>
                   <p className="text-muted-foreground">
-                    Monday - Friday: 9am - 6pm
-                    <br />
-                    Saturday: 10am - 4pm
+                    Monday - Saturday: 10:00am - 6:00pm
                     <br />
                     Sunday: Closed
                   </p>
